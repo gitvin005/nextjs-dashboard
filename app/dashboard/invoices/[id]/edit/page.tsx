@@ -1,7 +1,10 @@
 import Form from '@/app/ui/invoices/edit-form';
 import Breadcrumbs from '@/app/ui/invoices/breadcrumbs';
 import { fetchInvoiceById, fetchCustomers } from '@/app/lib/data';
+<<<<<<< HEAD
 import { notFound } from 'next/navigation';
+=======
+>>>>>>> 40f1c5c99429d67fe938eb9485645e5160700043
  
 export default async function Page({ params }: { params: { id: string } }) {
     const id = params.id;
@@ -9,9 +12,12 @@ export default async function Page({ params }: { params: { id: string } }) {
         fetchInvoiceById(id),
         fetchCustomers(),
       ]);
+<<<<<<< HEAD
       if (!invoice) {
         notFound();
       }
+=======
+>>>>>>> 40f1c5c99429d67fe938eb9485645e5160700043
   return (
     <main>
       <Breadcrumbs
